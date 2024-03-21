@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import navLogo from '../../assets/logo.svg'
 import { Button } from '../ui/button'
-import MenuNavigation from './menu-navigation';
+import NavigationMenu from './NavigationMenu';
 
 function Navigation(props: any) {
 
@@ -25,7 +25,7 @@ function Navigation(props: any) {
                     </div>
                   :
                     <div className="ml-auto">
-                      <MenuNavigation />
+                      <NavigationMenu />
                     </div>
                 }
             </div>

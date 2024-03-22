@@ -6,11 +6,16 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger
 } from "@/components/ui/dropdown-menu"
+
 import { Avatar, AvatarFallback, AvatarImage } from "../ui/avatar"
-import { Gift, LogOutIcon, Plus, Settings2Icon, User2Icon, UsersRound } from "lucide-react"
 import { Link } from "react-router-dom"
+import { Fragment } from "react"
+import Menu from "./NavigationModel";
 
 function NavigationMenuDropdown() {
+
+  const menu = Menu;
+
   return (
     <>
       <DropdownMenu>
@@ -37,42 +42,20 @@ function NavigationMenuDropdown() {
               </div>
           </DropdownMenuLabel>
           <DropdownMenuSeparator />
-          <DropdownMenuItem asChild>
-            <Link to="/rewards">
-              <User2Icon className="w-4 h-4 mr-3 text-sky-500" />
-              Your profile
-            </Link>
-          </DropdownMenuItem>
-          <DropdownMenuItem asChild>
-            <Link to="/profile">
-              <Plus className="w-4 h-4 mr-3 text-sky-500" />  
-              New Account
-            </Link>
-          </DropdownMenuItem>
-          <DropdownMenuSeparator />
-          <DropdownMenuItem asChild>
-            <Link to="/settings">
-              <Settings2Icon className="w-4 h-4 mr-3 text-sky-500" />
-              Settings
-            </Link>
-          </DropdownMenuItem>
-          <DropdownMenuItem asChild>
-            <Link to="/settings">
-              <UsersRound className="w-4 h-4 mr-3 text-sky-500" />
-              Delegates
-            </Link>
-          </DropdownMenuItem>
-          <DropdownMenuItem asChild>
-            <Link to="/settings">
-              <Gift className="w-4 h-4 mr-3 text-sky-500" />
-              Rewards
-            </Link>
-          </DropdownMenuItem>
-          <DropdownMenuSeparator />
-          <DropdownMenuItem>
-            <LogOutIcon className="w-4 h-4 mr-3 text-sky-500" />
-            Logout
-          </DropdownMenuItem>
+          {
+            menu.map((item: any, index: number) => (
+              <Fragment key={index}>
+                { item.link == "/logout" && <DropdownMenuSeparator /> }
+                <DropdownMenuItem asChild>
+                  <Link to={item.link}>
+                    {item.icon}
+                    {item.text}
+                  </Link>
+                </DropdownMenuItem>
+                { item.link == "/account/new" && <DropdownMenuSeparator /> }
+              </Fragment>
+            ))
+          }
         </DropdownMenuContent>
         
       </DropdownMenu>

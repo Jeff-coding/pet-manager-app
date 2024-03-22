@@ -15,7 +15,7 @@ function Navigation(props: any) {
   
   return (
     <>
-        <div className="bg-white shadow-md shadow-slate-200 py-6" {...props} >
+        <div className="bg-white shadow-md shadow-slate-200 py-6 z-10" {...props} >
             <div className="container flex items-center justify-between">
                 <img src={navLogo} alt="" />
                 { !isLoggedIn ?

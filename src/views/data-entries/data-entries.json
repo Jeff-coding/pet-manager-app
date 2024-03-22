@@ -1,0 +1,26 @@
+[
+    {
+        "invoiceId": "INV-4029512",
+        "invoiceName": "Bank Statement June 2023",
+        "date": "2024-03-20",
+        "acctName": "John S. Smith"
+    },
+    {
+        "invoiceId": "INV-5049834",
+        "invoiceName": "Contractors 2024",
+        "date": "2024-01-15",
+        "acctName": "Daisy Cullen"
+    },
+    {
+        "invoiceId": "INV-5504912",
+        "invoiceName": "Bank Statement September 2023",
+        "date": "2023-12-23",
+        "acctName": "John S. Smith"
+    },
+    {
+        "invoiceId": "INV-1049928",
+        "invoiceName": "Digital Development Services",
+        "date": "2024-03-20",
+        "acctName": "Daisy Cullen"
+    }
+]

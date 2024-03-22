@@ -71,7 +71,19 @@
     @apply border-border;
     font-optical-sizing: auto;
   }
+  html,
+  body,
+  #root {
+    height: 100%;
+    width: 100%;
+  }
+
   body {
     @apply bg-background text-foreground;
+  }
+
+  #root {
+    display: flex;
+    flex-direction: column;
   }
 }

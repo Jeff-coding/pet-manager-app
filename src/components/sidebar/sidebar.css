@@ -1,0 +1,4 @@
+.sidebar__nav a.active {
+  background-color: hsl(var(--primary));
+  color: hsl(var(--primary-foreground));
+}
